@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneApp</title>
+    <link rel="stylesheet" href="./aigame.css">
+    <link rel="stylesheet" href="./trustExercise.css">
+    <link rel="stylesheet" href="./phoneApp.css">
+</head>
+
+<body>
+
+    <div id="popUpContainer" class="popUp">
+        <h2 id="popUp">Placehodler popUp</h2>
+    </div>
+
+<div id="noBody">
+    <h1 id="creditCounter" onclick="hudHide()">Credit: 100</h1>
+
+
+    <div id="playingField"></div>
+    
+    <div id="startModalFade">
+        <div id="startModal">
+            <h1 id="introduction1">Mirra Photo App CYOA</h1>
+            <p id="introduction2">
+                Congratulation, you have the opportunity to test out our new app called Mirra.<br><br>
+                You can use our app to take photos of your friends, random people, or even just yourself (we call these people your photo subjects)
+                 and thanks to our state of the art AI you can apply a large assortment of filters to those photos to see how they'd look like
+                  if they were older, more fit, wearing a new outfit, trying out a different hairstyle, etc.<br><br>
+                As to avoid overwhelming our servers, we can't let everyone use all our filters and features at once, so we came up with a solution
+                 that will let you purchase the functions you're interested in, using a credit score system.<br> We'll give you 200 credits to start you out with,
+                  it should be enough to purchase most basic filters, but don't worry about using more than that,
+                   later on you'll have ways to raise your credit score by supporting our company in some way, or by proving that you're a trustworthy person.
+                  <br><br>Created by TryptophanDealer (https://www.reddit.com/u/TryptophanDealer) contact me if you want your art removed from my cyoa, or if you just want to say hi.
+                  <br><br>You have to be at least 18 years old to play this, you have been warned.
+            </p>
+            <h1 id="startBtn" onclick="playingFieldFiller()">I'm at least 18 years old</h1>
+        </div>
+    </div>
+
+    <h1 id="finishBtn" class="hide" onclick="finish()">Finalize</h1>
+
+</div>
+
+<div id="noBody3">
+
+    <div id="aiPlayingField">
+        <img id="playingImage" class="images" src="./imgs/AIGame/aiGameIntro.png" alt="PlayingImage">
+        <h1 id="startBtn2" onclick="aiStart()">Start</h1>
+        <h1 id="normalBtn" class="hide" onclick="pickDick()">DickPic</h1>
+        <h1 id="exceptionBtn" class="hide" onclick="pickNotDick()">Not DickPic</h1>
+    </div>
+
+    <div id="end" class="end">
+
+        <h1 id="endContent" class="endContent">
+          Game over!
+        </h1>
+        <h1 id="finBtn" onclick="ending()">Finish</h1>
+      
+      </div>
+
+</div>
+
+<div id="noBody2">
+
+    <h1 id="rollingField" class="rollingField">What you have to write:</h1>
+    <h1 id="rollingField2" class="rollingField">Where you have to write it:</h1>
+    <h1 id="rollCounter">Rolls remaining:<br>3</h1>
+    <div></div>
+    <h1 id="rollingField3" class="hide">What you have to write:</h1>
+    <h1 id="rollingField4" class="hide">Where you have to write it:</h1>
+    <div></div>
+    
+    <h3 id="permanent" class="bonus" onclick="taken(permanent)">You need to keep the writing on for a week, rewrite it every morning, or if it fades</h3>
+    <h3 id="heart" class="bonus" onclick="taken(heart)">Draw a couple of hearts around what you're writing</h3>
+    <h3 id="pic" class="bonus" onclick="taken(pic)">Take a picture of your work</h3>
+    <div></div>
+    <h3 id="picKeep" class="hide" onclick="taken(picKeep)">Keep the picture on your phone for a week</h3>
+    <h3 id="picSend" class="hide" onclick="taken(picSend)">Send the picture to someone you know</h3>
+    <h3 id="picShare" class="hide" onclick="taken(picShare)">Share the picture on reddit</h3>
+    <div></div>
+    <h3 id="double" class="bonus" onclick="taken(double)">You double all your remaining rolls, but you have to complete a whole new writing task once you finalized your choices. (You don't get new rolls for your second task)</h3>
+
+    
+    <h2 id="finalize" onclick="finalize()" >Finalize</h2>
+
+        <div></div>
+    <h2 id="fullReRoll" class="hide" onclick="reRollAll()">Reroll everything</h2>
+    <h2 id="writeReRoll" onclick="reRollWrite()">Reroll what you have to write</h2>
+    <h2 id="locationReRoll" onclick="reRollLocation()">Reroll where you have to write it</h2>
+
+    <div id="introductionFade">
+        <div id="introduction">
+            <h1 id="intro1">It's time for your trust exercise</h1>
+            <p id="intro2">As I said I simply want you to write something on your body. It doesn't matter what you use to write with, be it a marker, pen, lipstick or anyting else you can get your hands on.<br> 
+                What you have to write and where you're going to write it will mostly be decided by chance, you will get the chance to re-roll, if you don't like what you ended up with, but be careful there is always a chance that your next roll is going to be worse than you have now.<br>
+                You can get more rolls by taking up additional challenges. Keep in mind that each roll will only cost one re-roll even if you re-rolled everything.
+            </p>
+            <h2 id="start" class="start" onclick="start()">Start</h2>
+            <h2 id="lookBack" class="hide" onclick="hide(introductionFade)">Look back</h2>
+            <h2 id="continue" class="hide" onclick="cont()">Continue</h2>
+        </div>
+    </div>
+
+</div>
+
+<div id="noBody4">
+    <div id="endField">
+        <h1 class="mainTitle">These are your choices<br><br> if you're satisfied with them click the "Install App" button<br><br> if you'd rather try again click the "Restart" button.</h1>
+    </div>
+    <h1 id="reloadBtn1" onclick="location.reload()">Restart</h1>
+    <h1 id="endBtn1" onclick="revealEnding()">Install App</h1>
+
+    <div class="hide" id="endModalFade">
+        <div id="endModal">
+            <h1 id="endModalTitle">You Fool!</h1>
+            <p id="endModalContent">
+                Did you really think this could be real?<br><br>
+                I only made this to scam people out of hugs,  
+                <span id="endSpan">for which thanks by the way, you already promised and you can't take it back.</span><br><br>
+                <span style="font-style: italic;">fufufu</span><br><br>
+                Sorry by the way, I would make it real, if I could, but I'm afraid this might just be impossible.<br><br>
+                Please don't hate me!
+            </p>
+            <h1 id="reloadBtn" onclick="location.reload()">Restart</h1>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="./aigame.js"></script>
+<script src="./aicards.js"></script>
+
+<script src="./trustRolls.js"></script>
+<script src="./trustExercise.js"></script>
+
+<script src="./subTitles.js"></script>
+<script src="./initiate.js"></script>
+<script src="./effects.js"></script>
+<script src="./phoneApp.js"></script>
+
+</body>
+</html>

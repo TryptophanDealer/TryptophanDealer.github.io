@@ -1,0 +1,211 @@
+body {
+    background-color: rgb(180,86,43);
+    color: rgb(206,130,60);
+}
+
+#creditCounter {
+    text-align: center;
+    position: fixed;
+    bottom: -23px;
+    left: 45%;
+    right: 45%;
+    background-color: rgb(206,130,60);
+    color: rgb(33,11,57);
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    font-size: 25px;
+    z-index: 5;
+    transition: opacity 1.5s;
+}
+#creditCounter:hover {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.hide {
+    display: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.drawbackTitle {
+    text-align: center;
+    background-color: rgb(86, 50, 119);
+    color: rgb(255, 136, 136);
+    border-radius: 5px;
+    padding: 1px;
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+
+.mainTitle {
+    text-align: center;
+    background-color: rgb(206,130,60);
+    color: rgb(63,17,75);
+    border-radius: 5px;
+    padding: 1px;
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+
+#list {
+    display: none;
+}
+
+.effects {
+    display: block;
+    padding: auto;
+    background-color: rgb(206,130,60);
+    color: rgb(63,17,75);
+    border-radius: 5px;
+    margin: 1%;
+    justify-content: space-evenly;
+    width: 33.33%;
+    transition: background-color 0.5s;
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+    opacity: 0.7;
+    transition: background-color 0.5s, opacity 1s, box-shadow 0.5s;
+}
+.effects:hover, .effectsDrawback:hover {
+    opacity: 1;
+    box-shadow: 0 10px 15px 5px rgba(0,0,0,0.2);
+}
+
+.effectsDrawback{
+    display: block;
+    padding: auto;
+    background-color: rgb(86, 50, 119);
+    color: rgb(255, 136, 136);
+    border-radius: 5px;
+    margin: 1%;
+    justify-content: space-evenly;
+    width: 33.33%;
+    transition: background-color 0.5s;
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+    opacity: 0.7;
+    transition: background-color 0.5s, opacity 1s, box-shadow 0.5s;
+}
+
+.effectsPicked {
+    padding: auto;
+    background-color: rgb(101,207,107);
+    color: rgb(192,92,42);
+    border-radius: 5px;
+    margin: 1%;
+    justify-content: space-evenly;
+    width: 33.33%;
+    opacity: 1;
+    transition: background-color 0.5s, opacity 1s, box-shadow 0.5s;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.row {
+    width: 100%;
+  display: flex;
+  align-content: center;    
+}
+
+.effectImages {
+    max-width: 80%;
+    display: block;
+    margin: 1px auto;
+}
+.effectNames {
+text-align: center;
+}
+.effectRequirements {
+    text-align: center;
+    padding: 0px 50px;
+    font-size: large;
+    color: red;
+}
+.effectDescriptions {
+    text-align: center;
+    padding: 0px 50px;
+    font-size: large;
+}
+
+.imageSwitcher {
+    display: inline;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    z-index: 4;
+}
+
+.imageSwitcherIcon {
+    width: 70px;
+}
+
+#startBtn,#finishBtn,#reloadBtn,#reloadBtn1,#endBtn1 {
+    text-align: center;
+    background-color: rgb(206,130,60);
+    color: rgb(33,11,57);
+    border-radius: 5px;
+    margin-bottom: 40px;
+    padding: 5px;
+    font-size: 25px;
+    z-index: 5;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+#startBtn:hover,#finishBtn:hover,#reloadBtn:hover,#reloadBtn1:hover,#endBtn1:hover {
+    opacity: 1;
+}
+
+#startModalFade,#endModalFade {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#startModal,#endModal {
+    text-align: center;
+    background-color: rgb(180,86,43);
+    color: rgb(33,11,57);
+    margin: 5% auto;
+    padding: 20px;
+    padding-bottom: 0.1px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+#popUpContainer {
+    text-align: center;
+    position: fixed;
+    display: none;
+    z-index: 7;
+    background-color: rgb(150, 0, 0);
+    color: rgb(255, 255, 255);
+    left: 25%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 1%;
+    width: 50%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+img{
+    border-radius: 10px;
+}
+
+#noBody4{
+    display: none;
+}
