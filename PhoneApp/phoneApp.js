@@ -1,4 +1,4 @@
-let credit = 200;
+let credit = 150;
 let trueCredit = 0;
         
         function creditPlus(x) { credit += x; showTrueCredit() };
