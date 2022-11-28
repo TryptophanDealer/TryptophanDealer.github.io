@@ -300,6 +300,7 @@ function endRowFiller(rowId) {
 
 function revealEnding() {
     document.getElementById("endModalFade").style.display ="block"
+    saveResults()
     if (effects[59].state != 1) {
         document.getElementById("endSpan").innerHTML = "which really hurts by the way, why don't you want to give me a hug, do you not like me?<br><br>It doesn't matter, I fooled you, so I win!"
     }

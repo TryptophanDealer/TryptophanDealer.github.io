@@ -172,7 +172,7 @@ function nextPage() {
     document.getElementById("noBody2").style.display = "block"
     document.body.style.backgroundColor = "rgb(46, 24, 66)"
     document.body.style.color = "rgb(228, 228, 228)"
-}
+};
 
 function nextPage2() {
     document.getElementById("noBody").style.display = "none"
@@ -180,4 +180,20 @@ function nextPage2() {
     document.getElementById("noBody3").style.display = "block"
     document.body.style.backgroundColor = "rgb(46, 24, 66)"
     document.body.style.color = "rgb(228, 228, 228)"
-}
+};
+
+function saveResults() {
+
+    let savedFeatures = []
+    let savedDrawbacks = []
+
+    for (let i = 1; i < effects.length ; i++) {
+        if (effects[i].state === 1) {
+            if (i <= 33){savedFeatures.push(" "+effects[i].name)}
+            else {savedDrawbacks.push(" "+effects[i].name)}
+        }
+    }
+
+    document.getElementById("saveFeatures").innerHTML = savedFeatures
+    document.getElementById("saveDrawbacks").innerHTML = savedDrawbacks
+};
