@@ -37,10 +37,10 @@ function results() {
 
 function finalResult() {
     if (mistakes === 0) {document.getElementById("endContent").innerHTML = "Congratulations you've made it through without a single mistake, you're clearly very knowledgeable in the topic of dicks, you have nothing more to learn."}
-    else if (mistakes < 4) {document.getElementById("endContent").innerHTML = "You've made a couple mistakes, you'll need to spend some time studying dicks, you should spend a couple of hours looking at dick pics and you should be fine."}
+    else if (mistakes < 4) {document.getElementById("endContent").innerHTML = "You've made a couple mistakes, you'll need to get a little bit more familiar with dicks, but overall good, you should spend a couple of hours looking at dick pics and you should be fine."}
     else if (mistakes < 8) {document.getElementById("endContent").innerHTML = "You did a pretty bad job, you'll need to come in for a studying session where we'll show you a practical demonstration about dicks, by the end you'll be familiar with all kinds of dicks."}
     else if (mistakes < 30) {document.getElementById("endContent").innerHTML = "You just straight up suck at this, you'll need to come in for studying sessions once every month until you improve. In the sessions we'll teach you how to recognize dicks, not just by looking at it, but also by touch, smell and taste."}
-    else {document.getElementById("endContent").innerHTML = "Wow, you are really bad at this, suspiciously bad in fact, you either completely misunderstood the assigment, you failed on purpose, or you just have no idea what a dick actually is. Either way you'll need to come in for studying sessions once every week until we decide that you've improved. On each session you'll get intimately familiar with a dozens of dick, by the end of it you'll be able to tell everything about a dick just from its taste."}
+    else {document.getElementById("endContent").innerHTML = "Wow, you are really bad at this, suspiciously bad in fact, you either completely misunderstood the assigment, you failed on purpose, or you just have no idea what a dick actually is. Either way you'll need to come in for studying sessions once every week until we decide that you've improved. On each session you'll get intimately familiar with dozens of dick, by the end of it you'll be able to tell everything about a dick just from its taste."}
 };
 
 function nextImage() {

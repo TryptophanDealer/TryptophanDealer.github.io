@@ -1027,7 +1027,7 @@ const effects = [
         image: ["image60","imageB60","imageC60"],
         activeImage: 0,
         price: 25,
-        description: "If you take this, you'll be turned into your true form, which is obviously a cute potato. (As seen on the image above) <br>You can still change your appearance using our app, (assuming you purchased the appropriate filters) but one night each month you will change back to your true form and you won't be able to change again for a full 24 hours.",
+        description: "If you take this, you'll be turned into your true form, which is obviously a cute potato. (As seen on the image above) <br>You can still change your appearance using our app, (assuming you purchased the appropriate filters and the Real game-changer) but one night each month you will change back to your true form and you won't be able to change again for a full 24 hours.",
         alternateDescription: "",
         changedByRealGameChanger: false,
         drawback: true,
