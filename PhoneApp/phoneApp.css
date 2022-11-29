@@ -424,3 +424,18 @@ img{
 #finalize:hover {
     background-color: blueviolet;
 }
+
+#sandBox {
+    background-color: rgb(206,130,60);
+    color: rgb(33,11,57);
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+    font-size: large;
+    font-weight: bold;
+    opacity: 0.6;
+    transition: opacity 0.8s;
+}
+#sandBox:hover {
+    opacity: 1;
+}

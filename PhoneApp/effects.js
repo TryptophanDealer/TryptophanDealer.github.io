@@ -1,3 +1,5 @@
+let bulkMultiplier = 2
+
 const effects = [
 
     {

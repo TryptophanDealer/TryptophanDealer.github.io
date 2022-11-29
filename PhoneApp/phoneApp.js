@@ -119,7 +119,7 @@ function bulkCounter() {
 function showTrueCredit() {
     if (effects[40].state == 1) {
         bulkListener()
-        trueCredit = credit + bulkBonus*2
+        trueCredit = credit + bulkBonus*bulkMultiplier
     }
     else { trueCredit = credit }
     
@@ -196,4 +196,11 @@ function saveResults() {
 
     document.getElementById("saveFeatures").innerHTML = savedFeatures
     document.getElementById("saveDrawbacks").innerHTML = savedDrawbacks
+};
+
+function sandBoxMode() {
+    creditPlus(1969)
+    document.getElementById("creditCounter").style.display = "none"
+    document.getElementById("sandBox").style.display = "none"
+
 };
