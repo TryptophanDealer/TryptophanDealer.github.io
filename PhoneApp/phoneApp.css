@@ -425,7 +425,7 @@ img{
     background-color: blueviolet;
 }
 
-#sandBox {
+#sandBox, #normalMode {
     background-color: rgb(206,130,60);
     color: rgb(33,11,57);
     border-radius: 5px;
@@ -436,6 +436,6 @@ img{
     opacity: 0.6;
     transition: opacity 0.8s;
 }
-#sandBox:hover {
+#sandBox:hover, #normalMode:hover {
     opacity: 1;
 }

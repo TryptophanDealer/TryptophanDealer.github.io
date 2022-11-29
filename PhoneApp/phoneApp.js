@@ -202,5 +202,12 @@ function sandBoxMode() {
     creditPlus(1969)
     document.getElementById("creditCounter").style.display = "none"
     document.getElementById("sandBox").style.display = "none"
+    document.getElementById("normalMode").style.display = "none"
+    playingFieldFiller()
+};
 
+function normalMode() {
+    document.getElementById("sandBox").style.display = "none"
+    document.getElementById("normalMode").style.display = "none"
+    playingFieldFiller()
 };
