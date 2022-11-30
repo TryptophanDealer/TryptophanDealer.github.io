@@ -199,12 +199,17 @@ function saveResults() {
 };
 
 function sandBoxMode() {
+    gameMode = "Sandbox"
     creditPlus(1969)
     document.getElementById("creditCounter").style.display = "none"
     document.getElementById("sandBoxCounter").style.display = "block"
     document.getElementById("sandBox").style.display = "none"
     document.getElementById("normalMode").style.display = "none"
     playingFieldFiller()
+    
+    for (let i = 1; i<effects.length; i++) {
+        document.getElementById("cardCost"+i).innerHTML = "Free"
+    }
 };
 
 function normalMode() {
@@ -220,3 +225,5 @@ function showIntro() {
 function hideIntro() {
     document.getElementById("startModalFade").style.display = "none"
 };
+
+let gameMode = "Normal"

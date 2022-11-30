@@ -111,9 +111,8 @@
 
 <div id="noBody4">
     <div id="endField">
-        <h1 class="mainTitle">These are your choices<br><br> if you're satisfied with them click the "Install App" button<br><br> if you'd rather try again click the "Restart" button.</h1>
+        <h1 class="mainTitle">These are your choices<br><br> if you're satisfied with them click the "Install App" button</h1>
     </div>
-    <h1 id="reloadBtn1" onclick="location.reload()">Restart</h1>
     <h1 id="endBtn1" onclick="revealEnding()">Install App</h1>
 
     <div class="hide" id="endModalFade">
@@ -129,12 +128,17 @@
             </p>
             
             <h3>Here are your picks as text in case you want to copy and paste it to save it, or share it with other people.</h3>
+
+                <h5>Game Mode:</h5>
+                <p id="saveGameMode">Normal</p>
+
                 <h5>Features:</h5>
                 <p id="saveFeatures"></p>
             
                 <h5>Drawbacks:</h5>
                 <p id="saveDrawbacks"></p>
 
+            <h1 id="reloadBtn1" onclick="hideEnding()">Show choices again</h1>
             <h1 id="reloadBtn" onclick="location.reload()">Restart</h1>
         </div>
     </div>

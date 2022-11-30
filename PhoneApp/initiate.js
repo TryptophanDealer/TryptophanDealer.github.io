@@ -16,7 +16,8 @@ function playingFieldFiller() {
     document.getElementById("startModalFade").classList.toggle("hide")
     document.getElementById("finishBtn").classList.toggle("hide")
     insertTitles()    
-    document.getElementById("hideIntro").style.display = "block"
+    document.getElementById("hideIntro").style.display = "block"    
+    document.getElementById("saveGameMode").innerHTML = gameMode
 }
 
 function rowFiller(rowId) {
@@ -81,6 +82,7 @@ function InitiateIndependentCard(rowId, id){
         effectArtist.innerHTML = "Artist: "+effects[id].artist[0]
     let effectCost = tableRow.insertCell(1)
         effectCost.innerHTML = price(effects[id])+effects[id].price
+        effectCost.setAttribute("id", "cardCost"+id)
 
     if (effects[id].requires == "") {}
     else {let effectRequirements = document.createElement("p")
@@ -236,6 +238,7 @@ function initiateEndCard(rowId, id){
         effectArtist.innerHTML = "Artist: "+effects[id].artist[0]
     let effectCost = tableRow.insertCell(1)
         effectCost.innerHTML = price(effects[id])+effects[id].price
+        effectCost.setAttribute("id", "cardCostx"+id)
 
     if (effects[id].requires == "") {}
     else {let effectRequirements = document.createElement("p")
@@ -287,6 +290,7 @@ function endFieldRower() {
 }
 
 function endFieldFiller() {
+    setTimeout(sandBoxer, 10)
         endFieldRower()
     for (let i = 1 ;endCardNumber < pickedEffects;i ++) {
         endRowFiller(i)
@@ -305,4 +309,19 @@ function revealEnding() {
     if (effects[59].state != 1) {
         document.getElementById("endSpan").innerHTML = "which really hurts by the way, why don't you want to give me a hug, do you not like me?<br><br>It doesn't matter, I fooled you, so I win!"
     }
+    document.getElementById("endBtn1").innerHTML = "Show Endscreen"
+};
+
+function sandBoxer() {
+if (gameMode === "Sandbox") {
+    for (let i = 1; i<effects.length; i++) {
+        if (effects[i].state === 1) {
+        document.getElementById("cardCostx"+i).innerHTML = "Free"
+        }
+    }
+}
+};
+
+function hideEnding() {
+    document.getElementById("endModalFade").style.display ="none"
 }
