@@ -3,7 +3,7 @@ body {
     color: rgb(206,130,60);
 }
 
-#creditCounter {
+#creditCounter, #sandBoxCounter {
     text-align: center;
     position: fixed;
     bottom: -23px;
@@ -17,8 +17,12 @@ body {
     z-index: 5;
     transition: opacity 1.5s;
 }
-#creditCounter:hover {
+#creditCounter:hover, #sandBoxCounter:hover {
     opacity: 1;
+}
+
+#sandBoxCounter {
+    display: none;
 }
 
 .hidden {
@@ -425,7 +429,7 @@ img{
     background-color: blueviolet;
 }
 
-#sandBox, #normalMode {
+#sandBox, #normalMode, #showIntro, #hideIntro {
     background-color: rgb(206,130,60);
     color: rgb(33,11,57);
     border-radius: 5px;
@@ -437,6 +441,10 @@ img{
     opacity: 0.6;
     transition: opacity 0.8s;
 }
-#sandBox:hover, #normalMode:hover {
+#sandBox:hover, #normalMode:hover, #showIntro:hover, #hideIntro:hover {
     opacity: 1;
+}
+
+#hideIntro {
+    display: none;
 }

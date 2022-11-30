@@ -201,6 +201,7 @@ function saveResults() {
 function sandBoxMode() {
     creditPlus(1969)
     document.getElementById("creditCounter").style.display = "none"
+    document.getElementById("sandBoxCounter").style.display = "block"
     document.getElementById("sandBox").style.display = "none"
     document.getElementById("normalMode").style.display = "none"
     playingFieldFiller()
@@ -210,4 +211,12 @@ function normalMode() {
     document.getElementById("sandBox").style.display = "none"
     document.getElementById("normalMode").style.display = "none"
     playingFieldFiller()
+};
+
+function showIntro() {
+    document.getElementById("startModalFade").style.display = "block"
+};
+
+function hideIntro() {
+    document.getElementById("startModalFade").style.display = "none"
 };

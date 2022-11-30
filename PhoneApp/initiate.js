@@ -15,7 +15,8 @@ function playingFieldFiller() {
     }
     document.getElementById("startModalFade").classList.toggle("hide")
     document.getElementById("finishBtn").classList.toggle("hide")
-    insertTitles()
+    insertTitles()    
+    document.getElementById("hideIntro").style.display = "block"
 }
 
 function rowFiller(rowId) {
