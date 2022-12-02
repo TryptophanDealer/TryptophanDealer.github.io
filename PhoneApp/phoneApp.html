@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhoneApp</title>
+    <title>Mirra Photo App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./phoneApp.css">
 </head>
 
@@ -18,14 +19,16 @@
     <h1 id="creditCounter" onclick="hudHide()">Credit: 150</h1>
     <h1 id="sandBoxCounter">Sandbox Mode</h1>
     
-    <button id="showIntro" onclick="showIntro()">Show Intro</button>
+    <button id="showIntro" class="gameButton" onclick="showIntro()">Show Intro</button>
+    <button id="fontSizeButton" class="gameButton" onclick="largerFont()">Change font-size</button>
+    <button id="removeOpacityButton" class="gameButton" onclick="removeOpacity()">Remove opacity from cards</button>
 
     <div id="playingField"></div>
     
     <div id="startModalFade">
         <div id="startModal">
             <h1 id="introduction1">Mirra Photo App CYOA</h1>
-            <p id="introduction2">
+            <p class="effectDescriptions" id="introduction2">
                 Congratulations, you have the opportunity to test out our new app called Mirra.<br><br>
                 You can use our app to take photos of your friends, random people, or even just yourself (we call these people your photo subjects)
                  and thanks to our state of the art AI you can apply a large assortment of filters to those photos to see how they'd look like
@@ -38,7 +41,9 @@
                   <br><br>Created by TryptophanDealer (https://www.reddit.com/u/TryptophanDealer) contact me if you want your art removed from my cyoa, or if you just want to say hi.
                   <br><br>You have to be at least 18 years old to play this, you have been warned.
             </p>
-            <button id="sandBox" onclick="sandBoxMode()">Play Sandbox Mode</button> <button id="normalMode" onclick="normalMode()">Play Normal Mode</button> <button id="hideIntro" onclick="hideIntro()">Hide Intro</button>
+            <button id="sandBox" class="gameButton" onclick="sandBoxMode()">Play Sandbox Mode</button>
+            <button id="normalMode" class="gameButton" onclick="normalMode()">Play Normal Mode</button>
+            <button id="hideIntro" class="gameButton" onclick="hideIntro()">Hide Intro</button>
         </div>
     </div>
 
@@ -110,6 +115,9 @@
 </div>
 
 <div id="noBody4">
+    <button id="fontSizeButton2" class="gameButton" onclick="largerFont()">Change font-size</button>
+    <button id="removeOpacityButton2" class="gameButton" onclick="removeOpacity()">Remove opacity from cards</button>
+
     <div id="endField">
         <h1 class="mainTitle">These are your choices<br><br> if you're satisfied with them click the "Install App" button</h1>
     </div>
@@ -118,7 +126,7 @@
     <div class="hide" id="endModalFade">
         <div id="endModal">
             <h1 id="endModalTitle">You Fool!</h1>
-            <p id="endModalContent">
+            <p class="effectDescriptions" id="endModalContent">
                 Did you really think this could be real?<br><br>
                 I only made this to scam people out of hugs,  
                 <span id="endSpan">for which thanks by the way, you already promised and you can't take it back.</span><br><br>
@@ -127,16 +135,16 @@
                 Please don't hate me!
             </p>
             
-            <h3>Here are your picks as text in case you want to copy and paste it to save it, or share it with other people.</h3>
+            <h2>Here are your picks as text in case you want to copy and paste it to save it, or share it with other people.</h2>
 
-                <h5>Game Mode:</h5>
-                <p id="saveGameMode">Normal</p>
+                <h5 class="effectDescriptions">Game Mode:</h5>
+                <p class="effectDescriptions" id="saveGameMode">Normal</p>
 
-                <h5>Features:</h5>
-                <p id="saveFeatures"></p>
+                <h5 class="effectDescriptions">Features:</h5>
+                <p class="effectDescriptions" id="saveFeatures"></p>
             
-                <h5>Drawbacks:</h5>
-                <p id="saveDrawbacks"></p>
+                <h5 class="effectDescriptions">Drawbacks:</h5>
+                <p class="effectDescriptions" id="saveDrawbacks"></p>
 
             <h1 id="reloadBtn1" onclick="hideEnding()">Show choices again</h1>
             <h1 id="reloadBtn" onclick="location.reload()">Restart</h1>
