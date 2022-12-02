@@ -198,14 +198,19 @@ function saveResults() {
     document.getElementById("saveDrawbacks").innerHTML = savedDrawbacks
 };
 
+function pickGameMode() {
+    document.getElementById("sandBox").style.display = "none"
+    document.getElementById("normalMode").style.display = "none"
+    playingFieldFiller()
+};
+
 function sandBoxMode() {
     gameMode = "Sandbox"
     creditPlus(1969)
     document.getElementById("creditCounter").style.display = "none"
     document.getElementById("sandBoxCounter").style.display = "block"
-    document.getElementById("sandBox").style.display = "none"
-    document.getElementById("normalMode").style.display = "none"
-    playingFieldFiller()
+    
+    pickGameMode()
     
     for (let i = 1; i<effects.length; i++) {
         document.getElementById("cardCost"+i).innerHTML = "Free"
@@ -213,9 +218,7 @@ function sandBoxMode() {
 };
 
 function normalMode() {
-    document.getElementById("sandBox").style.display = "none"
-    document.getElementById("normalMode").style.display = "none"
-    playingFieldFiller()
+    pickGameMode()
 };
 
 function showIntro() {
@@ -227,3 +230,37 @@ function hideIntro() {
 };
 
 let gameMode = "Normal"
+
+let opacityOn = "true"
+
+function removeOpacity() {
+
+    if (isFinished === true) {
+        for (let i = 1; i < effects.length; i++) {
+            if (effects[i].state === 1) {
+                document.getElementById("cardx"+i).style.opacity = "1"
+            }
+        }
+        document.getElementById("removeOpacityButton2").style.opacity = "1"
+    }
+
+    else {
+        for (let i = 1; i < effects.length; i++) {
+            document.getElementById("card"+i).style.opacity = "1"
+    }
+    document.getElementById("removeOpacityButton").style.opacity = "1"
+}
+};
+
+let fontSize = 1.1
+
+function largerFont(){
+    if (fontSize < 1.7){        
+    fontSize += 0.2
+    $(".effectDescriptions").css("font-size", fontSize+"em");
+    }
+    else {
+        fontSize = 0.7
+        $(".effectDescriptions").css("font-size", "0.7em");
+    }
+};

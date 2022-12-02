@@ -429,7 +429,7 @@ img{
     background-color: blueviolet;
 }
 
-#sandBox, #normalMode, #showIntro, #hideIntro {
+.gameButton {
     background-color: rgb(206,130,60);
     color: rgb(33,11,57);
     border-radius: 5px;
@@ -441,7 +441,8 @@ img{
     opacity: 0.6;
     transition: opacity 0.8s;
 }
-#sandBox:hover, #normalMode:hover, #showIntro:hover, #hideIntro:hover {
+
+.gameButton:hover {
     opacity: 1;
 }
 
