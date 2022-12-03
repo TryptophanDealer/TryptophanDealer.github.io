@@ -264,3 +264,26 @@ function largerFont(){
         $(".effectDescriptions").css("font-size", "0.7em");
     }
 };
+
+
+function glasses(){
+    if (effects[51].state === 0) {
+        $(".effectsDrawback, .effects").css("filter","blur(0px)")
+        $(".effectsDrawback, .effects").hover(function(){
+            $(this).css("filter", "blur(0px)");
+            }, function(){
+            $(this).css("filter", "blur(0px)");
+          });
+    }
+    else if (effects[51].state === 1) {
+
+        $(".effectsDrawback, .effects").css({"filter":"blur(4px)","transition":"filter 0.5s"})
+
+        $(".effectsDrawback, .effects").hover(function(){
+            $(this).css("filter", "blur(0px)");
+            }, function(){
+            $(this).css("filter", "blur(4px)");
+          });
+
+    }
+};

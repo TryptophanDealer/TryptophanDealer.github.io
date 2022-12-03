@@ -18,6 +18,7 @@ function playingFieldFiller() {
     insertTitles()    
     document.getElementById("hideIntro").style.display = "block"    
     document.getElementById("saveGameMode").innerHTML = gameMode
+    document.getElementById("card51").addEventListener("click", glasses)
 }
 
 function rowFiller(rowId) {
@@ -179,6 +180,7 @@ if (trueCredit < 0) {popUp(4)}
         isFinished = true
         document.getElementById("finishBtn").classList.toggle("hide")
         endFieldFiller()
+        glasses()
 }
 };
 
