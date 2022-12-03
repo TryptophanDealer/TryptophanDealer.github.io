@@ -176,11 +176,11 @@ if (trueCredit < 0) {popUp(4)}
         document.body.style.color = "rgb(206,130,60)"
     }
 
+        setTimeout(glasses, 100)
         document.documentElement.scrollTop = 0
         isFinished = true
         document.getElementById("finishBtn").classList.toggle("hide")
         endFieldFiller()
-        glasses()
 }
 };
 
